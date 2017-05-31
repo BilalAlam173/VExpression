@@ -1,0 +1,35 @@
+body{
+
+}
+.header{
+	height: 40%;
+	background: #191919;
+}
+.title{
+	color: white;
+	font-size: 50px;
+	font-weight: 700;
+	font-family: sans-serif;
+
+}
+.vex{
+	border: solid;
+	height: 100%;
+}
+.rex{
+	border: solid;
+	height: 100%;
+}
+.type{
+	border: solid;
+	height: 100%;
+}
+.content{
+	height: 80%;
+
+}
+.footer{
+	height: 10%;
+	background: #191919;
+}
+}

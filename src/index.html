@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>VExpress</title>
+	<link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body ng-app="VExpress">
+	<div ng-controller="ctrl" class="container-fluid">
+		<div class="row header">
+			<div class="col-lg-4">
+			</div>
+			<div class="col-lg-4">
+				<h1 class="title">VExpress</h1>
+				<p style="color: grey">VExpress short for verbal expression  allows you to write regular expressions in natural language.
+				expressions</p>
+				<button class="btn btn-primary" ng-click="example(true)">View Example</button>
+			</div>
+			<div class="col-lg-4">
+			</div>
+		</div>
+		<div class="row content">
+			<div class="col-lg-4 vex">
+				<h3 style="border-bottom: solid #191919 ">Verbal Expression</h3>
+				  
+				<h4 ng-if="exampleFlag" ng-repeat="item in eg_vex.vex">{{item}}</h2>
+				<div ng-if="!exampleFlag">
+				<table class="table table-hover">
+					<thead>
+						<th>
+						method
+						</th>
+						<th>paramtere</th>
+						<th>value</th>
+						<th></th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="method in vexMethods">
+							<td>{{method.name}}</td>
+							<td>{{method.parametre}}</td>
+							<td>
+							<input class="form-control" type="text" ng-model="method.value" ng-if="method.parametre" required></td>
+							<td>
+							<button class="btn btn-xs btn-primary" ng-click="add(method)">add</button></td>
+						</tr>
+					</tbody>
+				</table>
+				{{paramValue}}
+				<h5 ng-repeat="method in userVex track by $index"><b>-->{{method.name}}({{method.value}})</b></h5>
+				</div>
+
+				<button ng-click="example(false)" ng-if="exampleFlag" class="btn btn-primary">create your own VExpression now :)</button>
+			</div>
+			<div class="col-lg-4 rex">
+				<h3 style="border-bottom: solid #191919">Regular Expression</h3>
+				<h4 ng-if="exampleFlag">{{eg_vex.rex}}</h4>
+				<h4>{{RE}}</h4>
+				<label>Test your RE</label>
+				<input ng-model="testString">
+				<button class="btn btn-sm btn-warning" ng-click="testRE()">test</button>
+				<h4 ng-model="testResult"></h4>
+			</div>
+			<div class="col-lg-4 type">
+				<h3 style="border-bottom: solid #191919">Name</h3>
+				<h4 ng-if="exampleFlag">{{eg_vex.type}}</h4>
+				<input ng-model="vexname">
+				<h2>{{vexname}}</h2>
+				
+			</div>
+		</div>
+		<div class="row footer">
+			<div class="col-lg-12">
+			<p style="color: grey">By Bilal Alam,Owais Baloch & Osama Rehman</p>
+			</div>
+			
+		</div>
+	</div>
+	<script  src="../node_modules/verbal-expressions/VerbalExpressions.js"></script>
+	<script  src="../node_modules/angular/angular.js"></script>
+	<script  src="app/app.js"></script>
+	<script  src="app/controller/controller.js"></script>
+
+</body>
+</html>

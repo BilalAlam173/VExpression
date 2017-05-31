@@ -1,0 +1,19 @@
+{
+  "name": "vexpress",
+  "version": "1.0.0",
+  "description": "implmentation of javascript variable expression library",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BilalAlam173/VExpression.git"
+  },
+  "author": "Muhammad Bilal Alam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BilalAlam173/VExpression/issues"
+  },
+  "homepage": "https://github.com/BilalAlam173/VExpression#readme"
+}
