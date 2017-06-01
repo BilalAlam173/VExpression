@@ -88,15 +88,15 @@ angular.module("VExpress").controller("ctrl",['$scope','$window',function(scope,
 		scope.userVex.push(method);
 		generateRE(method);
 	}
-	scope.name="sdf";
+	
 
 	scope.testRE=function(){
 		//console.log(test.test(scope.testString));
-		//window.alert(test.test(scope.testString));
-		scope.testResult=test.test(scope.testString);
+		window.alert(test.test(scope.testString));
+		//scope.testResult=test.test(scope.testString);
 		//console.log(scope.testResult);
 		
 	}
 
-
+}
 }]);
