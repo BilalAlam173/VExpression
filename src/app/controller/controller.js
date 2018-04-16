@@ -98,5 +98,4 @@ angular.module("VExpress").controller("ctrl",['$scope','$window',function(scope,
 		
 	}
 
-}
 }]);
